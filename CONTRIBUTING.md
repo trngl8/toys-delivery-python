@@ -4,7 +4,7 @@
 ### How to install and work
 
 ```bash
-$ git clone git@github.com:metacortex-software/metacortex-frontend.git
+$ git clone git@github.com:trngl8/duck-delivery-python.git
 $ cd metacortex-frontend
 $ git checkout -b your_branch_name
 ```
