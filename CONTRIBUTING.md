@@ -5,7 +5,7 @@
 
 ```bash
 $ git clone git@github.com:trngl8/duck-delivery-python.git
-$ cd metacortex-frontend
+$ cd duck-delivery-python
 $ git checkout -b your_branch_name
 ```
 
