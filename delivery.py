@@ -10,6 +10,17 @@ class Courier:
         return self.name
 
 
+class Vehicle:
+
+    def __init__(self, v_type):
+        self.v_type = v_type
+        self.speed = 1
+        self.position = 1
+
+    def move(self, position):
+        self.position += position
+
+
 obj = Courier()
 print(f'Name: {obj.get_name()}')
 
