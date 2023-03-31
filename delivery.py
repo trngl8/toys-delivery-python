@@ -1,6 +1,10 @@
+import datetime
+
+
 class Courier:
 
-    def __init__(self):
+    def __init__(self, culture):
+        self.culture = culture
         self.name = 'Morooze'
         self.cape_color = 'red'
         self.bread = True
@@ -8,6 +12,16 @@ class Courier:
 
     def get_name(self):
         return self.name
+
+    def get_partners_count(self):
+        if self.culture == 'USSR':
+            return 1
+        return 0
+
+    def can_work(self):
+        now = datetime.date
+        # TODO: implement date check
+        return False
 
 
 class Vehicle:
@@ -21,7 +35,5 @@ class Vehicle:
         self.position += position
 
 
-obj = Courier()
-print(f'Name: {obj.get_name()}')
-
-
+obj = Courier('USSR')
+print(f'Name: {obj.get_name()}, can work: {obj.can_work()}')
