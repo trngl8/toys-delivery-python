@@ -1,20 +1,21 @@
-## Contributors instructions
+## Contributors instructions for the Triangle Software members
 
 
 ### How to install and work
 
 ```bash
-$ git clone git@github.com:trngl8/duck-delivery-python.git
-$ cd duck-delivery-python
+$ git clone git@github.com:trngl8/toys-delivery-python.git
+$ cd toys-delivery-python
+$ git checkout develop
 $ git checkout -b your_branch_name
 ```
 
-### How to start a new feature
+### How to make a new feature
 
 You in a working directory 
 
 ```bash
-$ git checkout main
+$ git checkout develop
 $ git pull 
 $ git checkout your_branch_name
 ```
@@ -29,3 +30,5 @@ $ git add .
 $ git commit -m "some_message_for_the_commit"
 $ git push -u origin your_branch_name
 ```
+
+... and create a pull request.
