@@ -19,9 +19,14 @@ class Courier:
         return 0
 
     def can_work(self):
-        now = datetime.date
-        # TODO: implement date check
-        return False
+        now = datetime.datetime.now().time()
+        start_time = datetime.time(5, 0)
+        end_time = datetime.time(21, 0)
+
+        if start_time <= now <= end_time:
+            return True
+        else:
+            return False
 
 
 class Vehicle:
