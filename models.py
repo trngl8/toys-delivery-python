@@ -45,22 +45,21 @@ class Partner:
         self.culture = culture
         self.name = 'Snegurochka'
         self.partners = []
-        self.get_list = list
+        self.children_list = list
 
-    class Childrenlist:
-        def __init__(self, id, name, address, toy_id):
-            self.id = id
-            self.name = name
-            self.address = address
-            self.toy_id = toy_id
+    def get_list(self):
+        return self.children_list
 
-        def __str__(self):
-            return f"ID: {self.id}, NAME: {self.name}, ADDRESS: {self.address}, TOY_ID: {self.toy_id}"
 
-    child1 = Childrenlist(1, 'Vasya', 'Bashirkastan', 3)
-    child2 = Childrenlist(2, 'Olya', 'Vladivostok', 2)
-    child3 = Childrenlist(3, 'Sanya', 'Moskva', 1)
+class Childrenlist:
+    def __init__(self, id, name, address, toy_id):
+        self.id = id
+        self.name = name
+        self.address = address
+        self.toy_id = toy_id
 
-    children = [child1, child2, child3]
-    for child in children:
-        print(child)
+    def get_name(self):
+        return self.name
+
+    def __str__(self):
+        return f"ID: {self.id}, NAME: {self.name}, ADDRESS: {self.address}, TOY_ID: {self.toy_id}"
