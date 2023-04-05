@@ -12,4 +12,4 @@ child1 = Childrenlist(1, 'Vasya', 'Bashirkastan', 3)
 child2 = Childrenlist(2, 'Olya', 'Vladivostok', 2)
 child3 = Childrenlist(3, 'Sanya', 'Moskva', 1)
 
-grand_child = Partner("Snegurochka", Childrenlist)
+grand_child = Partner("Snegurochka", child1)
