@@ -38,3 +38,29 @@ class Vehicle:
 
     def move(self, position):
         self.position += position
+
+
+class Partner:
+    def __init__(self, culture, list):
+        self.culture = culture
+        self.name = 'Snegurochka'
+        self.partners = []
+        self.get_list = list
+
+    class Childrenlist:
+        def __init__(self, id, name, address, toy_id):
+            self.id = id
+            self.name = name
+            self.address = address
+            self.toy_id = toy_id
+
+        def __str__(self):
+            return f"ID: {self.id}, NAME: {self.name}, ADDRESS: {self.address}, TOY_ID: {self.toy_id}"
+
+    child1 = Childrenlist(1, 'Vasya', 'Bashirkastan', 3)
+    child2 = Childrenlist(2, 'Olya', 'Vladivostok', 2)
+    child3 = Childrenlist(3, 'Sanya', 'Moskva', 1)
+
+    children = [child1, child2, child3]
+    for child in children:
+        print(child)
