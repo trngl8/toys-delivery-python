@@ -1,15 +1,15 @@
 import unittest
 from models import Partner
-from models import DeliveryList as Childrenlist
+from models import DeliveryList
 
 
 class TestPartner(unittest.TestCase):
 
     def test_get_list(self):
-        children_list = Childrenlist()
+        children_list = DeliveryList()
         children_list.add('Test Name', '4, The Main str.', 1)
         children_list.add('Other Name', '2, The Second str.', 2)
-        grandchild = Partner('Snegurochka', children_list)
+        grandchild = Partner('USSR', children_list)
 
         last_item = grandchild.get_list().last()
 
