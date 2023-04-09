@@ -34,9 +34,25 @@ class Courier:
         self.delivery_type = delivery_type
         return True
 
+    def is_ready(self):
+        return self.can_work()
+
+    def get_next_address(self):
+        return self.partners[0].children_list.delivery_list.pop()['ADDRESS']
+
+    def add_partner(self, partner):
+        self.partners.append(partner)
+
     def next_delivery(self):
         # TODO: add a fibonnacci sequence
         self.level += 1
+
+    def delivery_run(self, delivery_target):
+        # TODO: use vehicle to increase speed
+        self.next_delivery()
+        result_speed = delivery_target.get('ID') * self.level
+
+        return result_speed
 
 
 class CourierExtended:
