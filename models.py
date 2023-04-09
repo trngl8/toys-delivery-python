@@ -9,6 +9,7 @@ class Courier:
         self.cape_color = 'red'
         self.bread = True
         self.partners = []
+        self.level = 1
 
     def get_name(self):
         return self.name
@@ -28,6 +29,9 @@ class Courier:
         else:
             return False
 
+    def next_delivery(self):
+        # TODO: add a fibonnacci sequence
+        self.level += 1
 
 class Vehicle:
 
