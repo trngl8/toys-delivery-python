@@ -7,7 +7,7 @@ from models import Partner
 from models import PartnerExtended
 
 # USSR culture
-courier  = Courier('USSR', 'Mooroze', 'blue')
+courier = Courier('USSR', 'Mooroze', 'blue')
 v8 = Vehicle('truck')
 print(f'Name: {courier.get_name()}, can work: {courier.can_work()}')
 
@@ -29,14 +29,7 @@ courier.add_partner(courier_partner)
 
 delivery_targets = courier_partner.get_list().delivery_list
 
-if not obj.can_work():
-    print("Delivery is unavailable")
-    exit
-
 while delivery_targets:
     next_delivery = delivery_targets.pop()
     result = courier.delivery_run(next_delivery)
     print(f"Delivered by {result} seconds")
-
-
-
