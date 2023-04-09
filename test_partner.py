@@ -1,15 +1,19 @@
 import unittest
 from models import Partner
-from models import Childrenlist
+from models import DeliveryList
 
 
 class TestPartner(unittest.TestCase):
 
     def test_get_list(self):
-        # TODO: choose better name for the "list" structure
-        children_list = Childrenlist(2, 'Olya', 'Vladivostok', 2)
-        grandchild = Partner('Sneg', children_list)
-        self.assertEqual('Olya', grandchild.get_list().get_name())
+        children_list = DeliveryList()
+        children_list.add('Test Name', '4, The Main str.', 1)
+        children_list.add('Other Name', '2, The Second str.', 2)
+        grandchild = Partner('USSR', children_list)
+
+        last_item = grandchild.get_list().last()
+
+        self.assertEqual('2, The Second str.', last_item['ADDRESS'])
 
 
 if __name__ == '__main__':

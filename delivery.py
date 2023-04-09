@@ -1,6 +1,6 @@
 from models import Courier
 from models import Vehicle
-from models import Childrenlist
+from models import DeliveryList
 from models import Partner
 
 
@@ -8,8 +8,8 @@ obj = Courier('USSR')
 v8 = Vehicle('truck')
 print(f'Name: {obj.get_name()}, can work: {obj.can_work()}')
 
-child1 = Childrenlist(1, 'Vasya', 'Bashirkastan', 3)
-child2 = Childrenlist(2, 'Olya', 'Vladivostok', 2)
-child3 = Childrenlist(3, 'Sanya', 'Moskva', 1)
+child_list = DeliveryList()
+child_list.add('Theo', '7172', 3)
+child_list.add('One', '101', 1)
 
-grand_child = Partner("Snegurochka", child1)
+courier_partner = Partner("USSR", child_list)

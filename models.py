@@ -51,15 +51,20 @@ class Partner:
         return self.children_list
 
 
-class Childrenlist:
-    def __init__(self, id, name, address, toy_id):
-        self.id = id
-        self.name = name
-        self.address = address
-        self.toy_id = toy_id
+class DeliveryList:
+    def __init__(self):
+        self.delivery_list = []
+        self.pointer = 0
 
-    def get_name(self):
-        return self.name
+    def add(self, name, address, toy_id):
+        next_pointer = self.pointer + 1
+        self.delivery_list.append({
+            'ID': next_pointer,
+            'NAME': name,
+            'ADDRESS': address,
+            'TOY_ID': toy_id
+        })
+        self.pointer = next_pointer
 
-    def __str__(self):
-        return f"ID: {self.id}, NAME: {self.name}, ADDRESS: {self.address}, TOY_ID: {self.toy_id}"
+    def last(self):
+        return self.delivery_list.pop()
