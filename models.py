@@ -34,12 +34,6 @@ class Courier:
         self.delivery_type = delivery_type
         return True
 
-    def is_ready(self):
-        return self.can_work()
-
-    def get_next_address(self):
-        return self.partners[0].children_list.delivery_list.pop()['ADDRESS']
-
     def add_partner(self, partner):
         self.partners.append(partner)
 
