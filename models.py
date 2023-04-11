@@ -3,9 +3,9 @@ import datetime
 
 class Courier:
 
-    def __init__(self, culture):
+    def __init__(self, culture, name):
         self.culture = culture
-        self.name = 'Morooze'
+        self.name = name
         self.cape_color = 'red'
         self.bread = True
         self.partners = []
