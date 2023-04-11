@@ -5,9 +5,14 @@ from models import Courier
 class TestCourier(unittest.TestCase):
 
     def test_move(self):
-        glovo = Courier("kubernetes")
+        glovo = Courier("kubernetes", 'Santa')
         result = glovo.delivery("fast")
         self.assertEqual(True, result)
+
+    def test_name(self):
+        target = Courier("test1", "test2")
+        result = target.get_name()
+        self.assertEqual("test2", result)
 
 
 if __name__ == '__main__':

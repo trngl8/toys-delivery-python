@@ -4,7 +4,7 @@ from models import DeliveryList
 from models import Partner
 
 
-obj = Courier('USSR')
+obj = Courier('USSR', 'Mooroze')
 v8 = Vehicle('truck')
 print(f'Name: {obj.get_name()}, can work: {obj.can_work()}')
 
