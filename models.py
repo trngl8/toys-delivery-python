@@ -31,6 +31,7 @@ class Courier:
             return False
     def delivery(self, delivery_type):
         self.delivery_type = delivery_type
+        return True
 
     def next_delivery(self):
         # TODO: add a fibonnacci sequence
