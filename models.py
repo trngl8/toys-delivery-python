@@ -10,6 +10,7 @@ class Courier:
         self.bread = True
         self.partners = []
         self.level = 1
+        self.delivery_type = 'fast'
 
     def get_name(self):
         return self.name
@@ -28,6 +29,9 @@ class Courier:
             return True
         else:
             return False
+    def delivery(self, delivery_type):
+        self.delivery_type = delivery_type
+        return True
 
     def next_delivery(self):
         # TODO: add a fibonnacci sequence
