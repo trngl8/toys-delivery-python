@@ -3,10 +3,10 @@ import datetime
 
 class Courier:
 
-    def __init__(self, culture, name):
+    def __init__(self, culture, name, cape_color):
         self.culture = culture
         self.name = name
-        self.cape_color = 'red'
+        self.cape_color = cape_color
         self.bread = True
         self.partners = []
         self.level = 1
@@ -29,6 +29,7 @@ class Courier:
             return True
         else:
             return False
+
     def delivery(self, delivery_type):
         self.delivery_type = delivery_type
         return True
@@ -36,6 +37,7 @@ class Courier:
     def next_delivery(self):
         # TODO: add a fibonnacci sequence
         self.level += 1
+
 
 class Vehicle:
 
