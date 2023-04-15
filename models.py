@@ -48,7 +48,6 @@ class Courier:
 
         return result_speed
 
-<<<<<<< HEAD
 
 class CourierExtended:
 
@@ -70,8 +69,6 @@ class CourierExtended:
     def can_work(self):
         return True
 
-=======
->>>>>>> efbfaf4 (run delivery fixes)
 
 class Vehicle:
 
