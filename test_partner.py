@@ -29,6 +29,14 @@ class TestPartnerExtended(unittest.TestCase):
 
         self.assertEqual('2, The Second str.', last_item['ADDRESS'])
 
+    def test_name(self):
+        children_list = DeliveryList()
+        partner = PartnerExtended('USA', children_list)
+
+        result = partner.get_name()
+
+        self.assertEqual('Gnome', result)
+
 
 if __name__ == '__main__':
     unittest.main()

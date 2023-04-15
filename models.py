@@ -89,19 +89,18 @@ class Partner:
         self.partners = []
         self.children_list = list
 
+    def get_name(self):
+        return self.name
+
     def get_list(self):
         return self.children_list
 
 
-class PartnerExtended:
+class PartnerExtended(Partner):
+
     def __init__(self, culture, list):
-        self.culture = culture
+        super().__init__(culture, list)
         self.name = 'Gnome'
-        self.partners = []
-        self.children_list = list
-
-    def get_list(self):
-        return self.children_list
 
 
 class DeliveryList:
