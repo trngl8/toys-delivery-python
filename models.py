@@ -39,11 +39,43 @@ class Courier:
         self.level += 1
 
 
+class CourierExtended:
+
+    def __init__(self, culture, name, cape_color):
+        self._culture = culture
+        self.name = name
+        self.cape_color = cape_color
+        self.bread = True
+        self.partners = []
+        self.level = 1
+        self.delivery_type = 'fast'
+
+    def get_name(self):
+        return self.name
+
+    def get_partners_count(self):
+        return 100
+
+    def can_work(self):
+        return True
+
+
 class Vehicle:
 
     def __init__(self, v_type):
         self.v_type = v_type
         self.speed = 1
+        self.position = 1
+
+    def move(self, position):
+        self.position += position
+
+
+class Sledge:
+
+    def __init__(self, v_type):
+        self.v_type = v_type
+        self.speed = 150
         self.position = 1
 
     def move(self, position):
@@ -57,8 +89,18 @@ class Partner:
         self.partners = []
         self.children_list = list
 
+    def get_name(self):
+        return self.name
+
     def get_list(self):
         return self.children_list
+
+
+class PartnerExtended(Partner):
+
+    def __init__(self, culture, list):
+        super().__init__(culture, list)
+        self.name = 'Gnome'
 
 
 class DeliveryList:
