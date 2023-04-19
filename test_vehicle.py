@@ -5,9 +5,9 @@ from models import Vehicle
 class TestVehicle(unittest.TestCase):
 
     def test_move(self):
-        v8 = Vehicle('truck')
+        v8 = Vehicle('camaro', 8)
         v8.move(3)
-        self.assertEqual(4, v8.position)
+        self.assertEqual(25, v8.position)
 
 
 # entry point
