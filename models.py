@@ -41,13 +41,13 @@ class Courier:
 
 class Vehicle:
 
-    def __init__(self, v_type):
+    def __init__(self, v_type, speed):
         self.v_type = v_type
-        self.speed = 1
+        self.speed = speed
         self.position = 1
 
     def move(self, position):
-        self.position += position
+        self.position += position * self.speed
 
 
 class Partner:
