@@ -4,19 +4,19 @@ import datetime
 class Courier:
 
     def __init__(self, culture, name, cape_color):
-        self.culture = culture
-        self.name = name
-        self.cape_color = cape_color
-        self.bread = True
-        self.partners = []
-        self.level = 1
-        self.delivery_type = 'fast'
+        self.__culture = culture
+        self.__name = name
+        self.__cape_color = cape_color
+        self.__bread = True
+        self.__partners = []
+        self.__level = 1
+        self.__delivery_type = 'fast'
 
     def get_name(self):
-        return self.name
+        return self.__name
 
     def get_partners_count(self):
-        if self.culture == 'USSR':
+        if self.__culture == 'USSR':
             return 1
         return 0
 
@@ -39,7 +39,7 @@ class Courier:
 
     def next_delivery(self):
         # TODO: add a fibonnacci sequence
-        self.level += 1
+        self.__level += 1
 
     def delivery_run(self, delivery_target):
         # TODO: use vehicle to increase speed
