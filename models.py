@@ -6,6 +6,7 @@ class Courier:
     def __init__(self, culture, name, cape_color):
         self.culture = culture
         self.name = name
+        self.full_name = cape_color + ' ' + name
         self.cape_color = cape_color
         self.bread = True
         self.partners = []
