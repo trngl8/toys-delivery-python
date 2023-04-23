@@ -8,7 +8,7 @@ from models import PartnerExtended
 
 # USSR culture
 courier = Courier('USSR', 'Mooroze', 'blue')
-v8 = Vehicle('truck')
+v8 = Vehicle('truck', 3)
 print(f'Name: {courier.get_name()}, can work: {courier.can_work()}')
 
 child_list = DeliveryList()
