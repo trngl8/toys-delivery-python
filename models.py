@@ -2,6 +2,7 @@ import datetime
 
 
 class Courier:
+    """ Base deliverer """
 
     def __init__(self, culture, name, cape_color):
         self.__culture = culture
@@ -13,17 +14,21 @@ class Courier:
         self.__delivery_type = 'fast'
 
     def get_name(self):
+        """ Getter for name """
         return self.__name
 
     def get_full_name(self):
+        """ Getter for full name """
         return f"{self.__cape_color} {self.__name}"
 
     def get_partners_count(self):
+        """ Getter partners count """
         if self.__culture == 'USSR':
             return 1
         return 0
 
     def can_work(self):
+        """ Check work ability """
         now = datetime.datetime.now().time()
         start_time = datetime.time(5, 0)
         end_time = datetime.time(21, 0)
@@ -33,7 +38,8 @@ class Courier:
         else:
             return False
 
-    def delivery(self, delivery_type):
+    def set_delivery_type(self, delivery_type):
+        """ Set delivery type """
         self.delivery_type = delivery_type
         return True
 
@@ -41,11 +47,11 @@ class Courier:
         self.__partners.append(partner)
 
     def next_delivery(self):
-        # TODO: add a fibonnacci sequence
+        """ Increase difficulty lever """
         self.__level += 1
 
     def delivery_run(self, delivery_target):
-        # TODO: use vehicle to increase speed
+        """ Run delivery process """
         self.next_delivery()
         result_speed = delivery_target.get('ID') * self.__level
 

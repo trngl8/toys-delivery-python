@@ -9,7 +9,7 @@ class TestCourier(unittest.TestCase):
 
     def test_move(self):
         glovo = Courier("kubernetes", 'Santa', 'red')
-        result = glovo.delivery("fast")
+        result = glovo.set_delivery_type("fast")
         self.assertEqual(True, result)
 
     def test_name(self):
