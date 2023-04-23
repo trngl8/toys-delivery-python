@@ -15,6 +15,10 @@ class TestCourier(unittest.TestCase):
         result = target.get_name()
         self.assertEqual("test2", result)
 
+    def test_get_full_name(self):
+        target = Courier("USSR", "Morooze", 'Blue')
+        result = target.get_full_name()
+        self.assertEqual("Blue Morooze", result)
 
 class TestCourierExtended(unittest.TestCase):
     def test_name(self):
