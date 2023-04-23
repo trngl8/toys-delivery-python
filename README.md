@@ -1,27 +1,18 @@
 # TDD Python 
 
-Target:
-- interview (profile) 
+## Instalation 
 
-Schedule: 
-1. 15.00 - 16.00 Sunday
-2. Code review 
-3. Future plans 
-4. Live coding 
-5. Homework
+### How to install
 
-Requirements:
-- git
-- Python 3.10
-- IDE
+```bash
+$ git clone git@github.com:trngl8/toys-delivery-python.git
+$ cd toys-delivery-python
+```
 
-Books:
-- Eric Mattes
+### How to run
 
-Optional:
-
-1. Bullet Journal
-2. Camera
-3. Duck 
+```bash
+$ python delivery.py
+```
 
 
