@@ -16,7 +16,7 @@ class Courier:
         return self.__name
 
     def get_full_name(self):
-        return f"{self.__name} {self.__cape_color}"
+        return f"{self.__cape_color} {self.__name}"
 
     def get_partners_count(self):
         if self.__culture == 'USSR':
