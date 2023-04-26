@@ -92,11 +92,11 @@ class Vehicle:
 
 class Sledge:
 
-    def __init__(self, v_type):
+    def __init__(self, v_type, deer_names):
         self.v_type = v_type
         self.speed = 150
         self.position = 1
-
+        self.deer_names = ["Salmon", "Baget", "Zvezda", "Tank", "Gagarin", "Molot", "Tulya", "Sneg", "Rasmus"]
     def move(self, position):
         self.position += position
 
