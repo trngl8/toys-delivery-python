@@ -100,6 +100,10 @@ class Sledge:
     def move(self, position):
         self.position += position
 
+    def get_engine(self):
+        # TODO: implement business logic
+        return range(0, 1)
+
 
 class Partner:
     def __init__(self, culture, list):
