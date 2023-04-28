@@ -15,6 +15,7 @@ class TestVehicle(unittest.TestCase):
 
         sledge = Sledge('sled')
         result = sledge.get_engine()
+        self.assertEqual(9, len(result))
         self.assertEqual(expected_deer_names, result)
 
 
