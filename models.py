@@ -92,17 +92,17 @@ class Vehicle:
 
 class Sledge:
 
-    def __init__(self, v_type, deer_names):
+    def __init__(self, v_type):
         self.v_type = v_type
         self.speed = 150
         self.position = 1
-        self.deer_names = ["Salmon", "Baget", "Zvezda", "Tank", "Gagarin", "Molot", "Tulya", "Sneg", "Rasmus"]
+        self.deer_names = ["Dasher", "Dancer", "Prancer", "Vixen", "Cupid", "Donner", "Blitzen", "Comet", "Rudolph"]
+
     def move(self, position):
         self.position += position
 
     def get_engine(self):
-        # TODO: implement business logic
-        return range(0, 1)
+        return self.deer_names
 
 
 class Partner:
