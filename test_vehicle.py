@@ -11,9 +11,12 @@ class TestVehicle(unittest.TestCase):
         self.assertEqual(25, v8.position)
 
     def test_sledge(self):
+        expected_deer_names = ["Dasher", "Dancer", "Prancer", "Vixen", "Cupid", "Donner", "Blitzen", "Comet", "Rudolph"]
+
         sledge = Sledge('sled')
-        result = len(sledge.get_engine())
-        self.assertEqual(9, result)
+        result = sledge.get_engine()
+        self.assertEqual(9, len(result))
+        self.assertEqual(expected_deer_names, result)
 
 
 # entry point
